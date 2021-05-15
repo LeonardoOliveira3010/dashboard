@@ -1,10 +1,25 @@
 import React from 'react'
-
-
-
+import Navbar from './components/Navbar/Navbar'
+import Sidebar from './components/sidebar/Sidebar'
 
 const App = () => {
-  return <h1>Olá, Mundo</h1>
+// Utilizando o Estado do React ( Hook )
+  const [sideBarOpen, setSideBarOpen] = React.useState(false)
+  
+  const openSideBar = () => setSideBarOpen(true)
+
+  const closeSideBar = () => setSideBarOpen(false)
+
+
+  return (
+    <>
+      <div className="container">
+        <Sidebar sideBarOpen={sideBarOpen} closeSideBar={closeSideBar}/>
+        <Navbar />
+      </div>
+    </>
+
+  )
 
 }
 
