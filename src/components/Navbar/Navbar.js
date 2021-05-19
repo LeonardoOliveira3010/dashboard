@@ -1,20 +1,24 @@
 import React from 'react'
+import Profile from '../Profile/Profile'
 import './navbar.css'
-import usuario from '../../assets/leonardo.jpg'
+// import '../Sidebar/sidebar.css'
 
-const Navbar = () => {
 
-    const name = 'Leonardo'
-
-    
+const Navbar = ({ sideBarOpen, closeSideBar }) => {
 
     return (
         <nav className="navbar">
             <div className="navbar__text">
-                <p>Bom dia, <span>{name}</span></p>
-            </div>
+                <div className={sideBarOpen ? "sideBar-responsive" : ""}>
+                    <i onClick={() => closeSideBar()}
+                    className="material-icons"
+                    id="sideBarIcon"
+                    aria-hidden="true"
+                    >dashboard</i>
 
+                </div>
             
+            </div>
 
             <div className="navbar__profile">
                 <div className="navbar__info">
@@ -30,12 +34,13 @@ const Navbar = () => {
                     <i className="material-icons">info</i>
                 </div>
                 
-                <div className="navbar__user">
+                {/* <div className="navbar__user">
                     <img height="40px" width="40px" src={usuario}></img>
                     <span>{name}</span>
                     <i className="material-icons">expand_more</i>
-                </div>
+                </div> */}
                 
+                <Profile />
             </div>
         </nav>
     )

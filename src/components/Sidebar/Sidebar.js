@@ -1,26 +1,21 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
 import "./sidebar.css"
 
 // import {menu, customer} from './src/assets'
 
 
-const Sidebar = ({ sideBarOpen, closeSideBar }) => {
-
-
+const Sidebar = () => {
 
     return (
-        <div className={sideBarOpen ? "sideBar-responsive" : ""} id="sidebar">
+        <div id="sidebar">
 
             <div className="sidebar__title">
                 <div className="sidebar__img">
                     <a href="#"> LOGO </a>
                 </div>
                
-                <i onClick={() => closeSideBar()}
-                className="material-icons"
-                id="sideBarIcon"
-                aria-hidden="true"
-                >dashboard</i>
+                
             </div>
             
 

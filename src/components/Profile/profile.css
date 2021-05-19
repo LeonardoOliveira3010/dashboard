@@ -1,0 +1,45 @@
+/* Profile */
+.navbar__profile{
+    width: 450px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar__icons{
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.navbar__icons i{
+    cursor: pointer;
+    padding: 0 0.8rem;
+    color: #f1faee;
+}
+
+.navbar__user{
+    width: 200px;
+    height: 50px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background--sidebar);
+    color: #f1faee;
+    cursor: pointer;
+}
+
+.navbar__user:hover{
+    color:#dc2f02;
+}
+
+.navbar__user img{
+    margin-right: 0.7rem;
+    border-radius: 50%;
+}
+
+.navbar__user i{
+    padding-left: 0.7rem;
+    
+}
